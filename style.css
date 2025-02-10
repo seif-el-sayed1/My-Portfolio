@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Cairo", serif;
+}
+:root {
+    --main-color: #030921; 
+    --secondary-color: #0063f5; 
+}
+html {
+    scroll-behavior: smooth;
+    list-style: none;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+.home {
+    background-color: var(--main-color);
+    /* height: 100vh; */
+}
+.nav {
+    padding: 25px 0 45px;
+}
+.nav .container { 
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    color: var(--secondary-color);
+}
+.nav ul {
+    display: flex;
+    column-gap: 30px;
+    font-size: 17px;
+}
+.nav .container a {
+    font-size: 20px;
+    color: #fff;
+    transition: 0.3s;
+}
+.nav .container a:hover {
+    color: var(--secondary-color);
+    text-shadow: 0 0 15px var(--secondary-color), 
+    0 0 30px var(--secondary-color),
+    0 0 45px var(--secondary-color),
+    0 0 60px var(--secondary-color);
+}
+.nav i {
+    font-size: 30px;
+    cursor: pointer;
+}
+.nav .sections2 {
+    display: none;
+    position: absolute;
+    right: 5%; 
+    top: 10%;
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+}
+.nav i:hover + div {
+    display: block;
+}
+.nav .sections2:hover {
+    display: block;
+}
+.body img {
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+    border: 6px solid var(--secondary-color);    
+}
+.body .container {
+    display: flex;
+    justify-content: space-between;
+}
+.body .text h1 {
+    font-size: 40px;
+    color: var(--secondary-color);
+    letter-spacing: 1.3px;
+}
+.body .text h3 {
+    color: #fff;
+    font-size: 25px; 
+    letter-spacing: 1.3px;   
+}
+.body .text p {
+    color: #fff;
+    letter-spacing: 1.3px;
+}
+.body button {
+    margin-top: 20px;
+    border: none;
+    display: block;
+    position: relative;
+    padding: 0.7em 2.4em;
+    font-size: 18px;
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    color: royalblue;
+    z-index: 1;
+    font-family: inherit;
+    font-weight: 500;
+}
+.body button span {
+    position: absolute;
+    left: 0px;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+    border: 4px solid var(--secondary-color);
+}
+.body button span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 8%;
+    height: 500%;
+    background: var(--lightgray);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-60deg);
+    transition: all 0.3s;
+}
+.body button:hover span::before {
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 100%;
+    background: var(--secondary-color);
+}
+.body button:hover {
+    color: #fff;
+}
+.body button:active span::before {
+    background: var(--secondary-color);
+}
+.body h4 {
+    margin-top: 10px;
+    color: #fff;
+    letter-spacing: 1.3px;   
+    font-size: 17px;
+}
+.body ul {
+    margin-top: 10px;
+    display: flex;
+    column-gap: 30px;
+}   
+.gmail:active {
+    color: var(--secondary-color);
+}
+.body ul a {
+    color: var(--secondary-color);
+    padding: 0px 9px;
+    border-radius: 50%;
+    border: 2px solid var(--secondary-color);
+    transition: 0.3s;
+}
+.body ul a:hover {
+    background-color: #fff;
+}
+.linkedin:hover {
+    color: #0077B5;
+}
+.github:hover {
+    color: #181717;
+}
+.facebook:hover {
+    color: #1877F2;
+}
+@media (max-width: 730px) {
+    .body .container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .body ul {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        column-gap: 60px;
+    } 
+    .body img {
+        width: 200px;
+        height: 200px;
+    }
+    .cv {
+        display: flex;
+        justify-content: center;
+    }
+}
+@media (max-width: 600px) {
+    .nav ul {
+        display: none;
+    }
+}
