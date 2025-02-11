@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // scroll arrow
 window.onscroll = function() {
     const button = document.getElementById('scroll-btn');
-    if (window.scrollY > 0) {
+    if (window.scrollY > 100) {
         button.style.display = 'block';
     } else {
         button.style.display = 'none';

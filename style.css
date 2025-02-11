@@ -539,6 +539,7 @@ ul {
     text-align: center;
     cursor: pointer;
     animation: bounce 1s infinite;
+    display: none;
 }
 @keyframes bounce {
     0%, 100% {
