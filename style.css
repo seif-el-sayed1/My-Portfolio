@@ -36,12 +36,14 @@ html {
         width: 1170px;
     }
 }
+
 a {
     text-decoration: none;
 }
 ul {
     list-style: none;
 }
+/* #----------------------------------- Home -----------------------------------# */
 .home {
     background-color: var(--main-color);
     padding-bottom: 70px;
@@ -282,6 +284,7 @@ ul {
         justify-content: center;
     }
 }
+/* #----------------------------------- Skills -----------------------------------# */
 .skills {
     background-image: url("/assets/bg_img.png");
     background-size: cover;
@@ -348,4 +351,104 @@ ul {
         display: flex;
         justify-content: center;
     }
+}
+/* #----------------------------------- Projects -----------------------------------# */
+.projects {
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    padding: 20px 0;
+    letter-spacing: 1.1px;
+}
+.projects .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 15px;
+}
+.projects .project {
+    border: 2px solid #fff;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.project:nth-child(odd) {
+    transform: translateX(-100px);
+}
+.project:nth-child(even) {
+    transform: translateX(100px);
+}
+.project.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+.projects .project:hover {
+    box-shadow: 0 1px 13px 1px #0063f5;
+}
+.projects .project .head {
+    border-bottom: 2px solid var(--secondary-color);
+    padding: 15px 5px;
+}
+.projects .project h2 {
+    position: relative;
+    padding-left: 20px;
+}
+.projects .project h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 16px;
+    background-color: var(--secondary-color);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+.projects .project h2 + span{
+    color: #fff;
+    font-size: 20px;
+}
+.projects .project ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-bottom: 2px solid var(--secondary-color);
+    padding: 15px 5px;
+}
+.projects .project ul li {
+    padding: 0 3px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    background-color: var(--secondary-color);
+    color: #fff;
+    font-weight: bold;    
+}
+.projects .project .links {
+    padding: 15px 5px;
+}
+.projects .project .code {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    color: #fff;
+}
+.projects .project .code i {
+    font-size: 20px;
+    color: var(--secondary-color);
+}
+.projects .project .host {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #fff;
+}
+.projects .project .preview {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #fff;
+}
+.projects .project a {
+    text-decoration: underline;
+    color: var(--secondary-color);
 }
