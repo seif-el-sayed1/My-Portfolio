@@ -9,7 +9,6 @@ cvBtn.addEventListener("click", () => {
     link.click();
     document.body.removeChild(link); 
 });
-
 // skills animation
 const skills = document.getElementById("skills");
 const spans = document.querySelectorAll(".skills .progress span");
@@ -18,7 +17,6 @@ const spans = document.querySelectorAll(".skills .progress span");
 const about = document.getElementById("aboutme");
 const box = document.querySelector(".box");
 
-// تأكد من أن العناصر موجودة قبل المتابعة
 if (skills && spans.length > 0 && about && box) {
     window.addEventListener("scroll", () => {
         // skills animation
@@ -30,8 +28,6 @@ if (skills && spans.length > 0 && about && box) {
 
         // Reveal about me 
         const aboutPosition = about.getBoundingClientRect().top;
-        console.log("aboutPosition:", aboutPosition, "window.innerHeight:", window.innerHeight);
-        
         if (aboutPosition <= window.innerHeight - 200) {
             box.classList.add("active");
         }
@@ -39,7 +35,6 @@ if (skills && spans.length > 0 && about && box) {
 } else {
     console.error("Error: One or more elements not found!");
 }
-
 // Reveal project on Scroll
 document.addEventListener("DOMContentLoaded", () => {
     const projects = document.querySelectorAll(".projects .project");
@@ -52,3 +47,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }, { threshold: 0.2 });
     projects.forEach(project => observer.observe(project));
 });
+// scroll arrow
+window.onscroll = function() {
+    const button = document.getElementById('scroll-btn');
+    if (window.scrollY > 0) {
+        button.style.display = 'block';
+    } else {
+        button.style.display = 'none';
+    }
+};
+function scroll_top () {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}

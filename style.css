@@ -526,3 +526,25 @@ ul {
     background-color: #fff;
     box-shadow: 0 2px 10px 5px #0063f5;
 }
+/* #----------------------------------- scroll button -----------------------------------# */
+.scroll-btn {
+    position: fixed;
+    right: 22px;
+    bottom: 25px;
+    background-color: var(--secondary-color);
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    animation: bounce 1s infinite;
+}
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
