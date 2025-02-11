@@ -90,6 +90,16 @@ ul {
 .nav .sections2:hover {
     display: block;
 }
+@media (max-width: 600px) {
+    .nav ul {
+        display: none;
+    }
+}
+@media (min-width: 600px) {
+    .nav .bars {
+        display: none;
+    }
+}
 .body img {
     border-radius: 50%;
     width: 350px;
@@ -109,6 +119,61 @@ ul {
     color: #fff;
     font-size: 25px; 
     letter-spacing: 1.3px;   
+}
+.typing-container {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid var(--secondary-color);
+    animation: typing 3s steps(30, end) infinite alternate, deleting 2s steps(30, end) infinite alternate;
+}
+@keyframes typing {
+    from { width: 20%; }
+    to { width: 45%; }
+}
+@keyframes deleting {
+    from { width: 45%; }
+    to { width: 20%; }
+}
+@media (max-width: 1030px) {
+    @keyframes typing {
+        from { width: 20%; }
+        to { width: 60%; }
+    }
+    @keyframes deleting {
+        from { width: 60%; }
+        to { width: 20%; }
+    }
+}
+@media (max-width: 992px) {
+    @keyframes typing {
+        from { width: 25%; }
+        to { width: 100%; }
+    }
+    @keyframes deleting {
+        from { width: 100%; }
+        to { width: 25%; }
+    }
+}
+@media (max-width: 730px) {
+    @keyframes typing {
+        from { width: 20%; }
+        to { width: 65%; }
+    }
+    @keyframes deleting {
+        from { width: 65%; }
+        to { width: 20%; }
+    }
+}
+@media (max-width: 582px) {
+    @keyframes typing {
+        from { width: 25%; }
+        to { width: 90%; }
+    }
+    @keyframes deleting {
+        from { width: 90%; }
+        to { width: 25%; }
+    }
 }
 .body .text p {
     color: #fff;
@@ -215,16 +280,6 @@ ul {
     .cv {
         display: flex;
         justify-content: center;
-    }
-}
-@media (max-width: 600px) {
-    .nav ul {
-        display: none;
-    }
-}
-@media (min-width: 600px) {
-    .nav .bars {
-        display: none;
     }
 }
 .skills {
