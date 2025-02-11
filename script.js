@@ -1,5 +1,5 @@
 // Download CV 
-const pdfUrl = "/assets/Seif_El_Sayed CV.pdf"
+const pdfUrl = "/assets/Seif_El_Sayed CV.pdf";
 const cvBtn = document.getElementById("cv-btn");
 cvBtn.addEventListener("click", () => {
     const link = document.createElement("a"); 
@@ -9,17 +9,38 @@ cvBtn.addEventListener("click", () => {
     link.click();
     document.body.removeChild(link); 
 });
+
 // skills animation
-const skills = document.getElementById("skills")
-let spans = document.querySelectorAll(".skills .progress span")
-window.onscroll = () => {
-    if (window.scrollY >= skills.offsetTop - 230) {
-        spans.forEach((span) => {
-            span.style.width = span.dataset.width;
-        });
-    }
+const skills = document.getElementById("skills");
+const spans = document.querySelectorAll(".skills .progress span");
+
+// Reveal about me 
+const about = document.getElementById("about");
+const box = document.querySelector(".box");
+
+// تأكد من أن العناصر موجودة قبل المتابعة
+if (skills && spans.length > 0 && about && box) {
+    window.addEventListener("scroll", () => {
+        // skills animation
+        if (window.scrollY >= skills.offsetTop - 230) {
+            spans.forEach((span) => {
+                span.style.width = span.dataset.width;
+            });
+        }
+
+        // Reveal about me 
+        const aboutPosition = about.getBoundingClientRect().top;
+        console.log("aboutPosition:", aboutPosition, "window.innerHeight:", window.innerHeight);
+        
+        if (aboutPosition <= window.innerHeight - 200) {
+            box.classList.add("active");
+        }
+    });
+} else {
+    console.error("Error: One or more elements not found!");
 }
-// Reveal on Scroll
+
+// Reveal project on Scroll
 document.addEventListener("DOMContentLoaded", () => {
     const projects = document.querySelectorAll(".projects .project");
     const observer = new IntersectionObserver((entries) => {

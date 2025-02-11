@@ -46,7 +46,7 @@ ul {
 /* #----------------------------------- Home -----------------------------------# */
 .home {
     background-color: var(--main-color);
-    padding-bottom: 70px;
+    padding-bottom: 50px;
 }
 .nav {
     padding: 25px 0 45px;
@@ -358,6 +358,7 @@ ul {
     color: var(--secondary-color);
     padding: 20px 0;
     letter-spacing: 1.1px;
+    overflow: hidden;
 }
 .projects .container {
     display: grid;
@@ -451,4 +452,31 @@ ul {
 .projects .project a {
     text-decoration: underline;
     color: var(--secondary-color);
+}
+/* #----------------------------------- about me -----------------------------------# */
+.about {
+    background-image: url("/assets/bg_img.png");
+    background-size: cover;
+    padding: 20px 0;
+    overflow: hidden;
+}
+.about p {
+    text-align: center;
+    font-weight: bold;
+}
+.about .box {
+    padding: 25px;
+    letter-spacing: 1.1px;
+    box-shadow: 0 0 25px #000;
+    border-radius: 10px;
+    color: #fff;
+    background-color: var(--secondary-color);
+    transform: translateY(100px);
+    opacity: 0;
+    overflow: hidden;
+    transition: transform 0.6s ease-out, opacity 0.6s;
+}
+.box.active {
+    transform: translateY(0);
+    opacity: 1;
 }
