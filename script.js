@@ -15,7 +15,7 @@ const skills = document.getElementById("skills");
 const spans = document.querySelectorAll(".skills .progress span");
 
 // Reveal about me 
-const about = document.getElementById("about");
+const about = document.getElementById("aboutme");
 const box = document.querySelector(".box");
 
 // تأكد من أن العناصر موجودة قبل المتابعة
