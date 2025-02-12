@@ -14,7 +14,7 @@ const skills = document.getElementById("skills");
 const spans = document.querySelectorAll(".skills .progress span");
 
 // Reveal about me 
-const about = document.getElementById("aboutme");
+const about = document.getElementById("about");
 const box = document.querySelector(".box");
 
 if (skills && spans.length > 0 && about && box) {
