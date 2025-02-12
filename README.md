@@ -1,2 +1,2 @@
-# My portifolio
-Using HTML, CSS and Javascript
+# My portfolio
+Using HTML, CSS and Javascript.
