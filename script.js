@@ -17,15 +17,8 @@ const spans = document.querySelectorAll(".skills .progress span");
 const about = document.getElementById("about");
 const box = document.querySelector(".box");
 
-if (skills && spans.length > 0 && about && box) {
+if (about && box) {
     window.addEventListener("scroll", () => {
-        // skills animation
-        if (window.scrollY >= skills.offsetTop - 230) {
-            spans.forEach((span) => {
-                span.style.width = span.dataset.width;
-            });
-        }
-
         // Reveal about me 
         const aboutPosition = about.getBoundingClientRect().top;
         if (aboutPosition <= window.innerHeight - 200) {
