@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -49,12 +50,26 @@ ul {
     padding-bottom: 50px;
 }
 .nav {
-    padding: 25px 0 45px;
+    margin-bottom: 45px;
+    padding: 25px 0 20px;
+    box-shadow: 5px 5px 15px 0px #1A2F4A;
 }
 .nav .container { 
     display: flex;
     justify-content: space-between;
     color: var(--secondary-color);
+}
+.nav h2 {
+    font-family: "Poppins", serif;
+}
+.nav h2 span {
+    font-family: "Poppins", serif;
+    color: white;
+    transition: 0.3s;
+}
+.nav h2 span:hover {
+    color: var(--secondary-color);
+    cursor: pointer;
 }
 .nav ul {
     display: flex;
@@ -92,91 +107,37 @@ ul {
 .nav .sections2:hover {
     display: block;
 }
-@media (max-width: 600px) {
+@media (max-width: 705px) {
     .nav ul {
         display: none;
     }
 }
-@media (min-width: 600px) {
+@media (min-width: 705px) {
     .nav .bars {
         display: none;
     }
-}
-.body img {
-    border-radius: 50%;
-    width: 350px;
-    height: 350px;
-    border: 3px solid var(--secondary-color);   
-    padding: 7px; 
 }
 .body .container {
     display: flex;
     justify-content: space-between;
 }
+.body img {
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+    border: 10px solid white;   
+}
 .body .text h1 {
-    font-size: 40px;
+    font-size: 55px;
+    font-weight: 900;
     color: var(--secondary-color);
     letter-spacing: 1.3px;
+    font-family: "Poppins", serif;
 }
 .body .text h3 {
     color: #fff;
     font-size: 25px; 
     letter-spacing: 1.3px;   
-}
-.typing-container {
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 2px solid var(--secondary-color);
-    animation: typing 3s steps(30, end) infinite alternate, deleting 2s steps(30, end) infinite alternate;
-}
-@keyframes typing {
-    from { width: 20%; }
-    to { width: 45%; }
-}
-@keyframes deleting {
-    from { width: 45%; }
-    to { width: 20%; }
-}
-@media (max-width: 1030px) {
-    @keyframes typing {
-        from { width: 20%; }
-        to { width: 60%; }
-    }
-    @keyframes deleting {
-        from { width: 60%; }
-        to { width: 20%; }
-    }
-}
-@media (max-width: 992px) {
-    @keyframes typing {
-        from { width: 25%; }
-        to { width: 100%; }
-    }
-    @keyframes deleting {
-        from { width: 100%; }
-        to { width: 25%; }
-    }
-}
-@media (max-width: 730px) {
-    @keyframes typing {
-        from { width: 20%; }
-        to { width: 65%; }
-    }
-    @keyframes deleting {
-        from { width: 65%; }
-        to { width: 20%; }
-    }
-}
-@media (max-width: 582px) {
-    @keyframes typing {
-        from { width: 25%; }
-        to { width: 90%; }
-    }
-    @keyframes deleting {
-        from { width: 90%; }
-        to { width: 25%; }
-    }
 }
 .body .text p {
     color: #fff;
@@ -232,13 +193,13 @@ ul {
     background: var(--secondary-color);
 }
 .body h4 {
-    margin-top: 10px;
+    margin-top: 20px;
     color: #fff;
     letter-spacing: 1.3px;   
     font-size: 17px;
 }
 .body ul {
-    margin-top: 10px;
+    margin-top: 20px;
     display: flex;
     column-gap: 30px;
 }   
@@ -247,31 +208,28 @@ ul {
 }
 .body ul a {
     color: var(--secondary-color);
-    padding: 0px 9px;
-    border-radius: 50%;
-    border: 2px solid var(--secondary-color);
+    font-size: 35px;
+    font-family: "Poppins", serif;
+    padding: 0px 7px;
+    border-radius: 5px;
+    background-color: #fff;
     transition: 0.3s;
 }
 .body ul a:hover {
     background-color: #fff;
     box-shadow: 0 2px 10px 5px #0063f5;
-}
-.linkedin:hover {
-    color: #0077B5;
-}
-.github:hover {
-    color: #181717;
-}
-.facebook:hover {
-    color: #1877F2;
+    padding: 5px 10px;
 }
 @media (max-width: 730px) {
+    .nav h2 {
+        font-size: 20px;
+    }
     .body .container {
         flex-direction: column-reverse;
         text-align: center;
     }
     .body ul {
-        margin-top: 10px;
+        margin-top: 20px;
         display: flex;
         justify-content: center;
         column-gap: 60px;
@@ -296,7 +254,9 @@ ul {
     color: white;
     letter-spacing: 1.5px;
     background-color: var(--secondary-color);
-    width: 150px;
+    width: 200px;
+    padding: 7px;
+    font-family: "Poppins", serif;
 }
 @media (max-width: 600px) {
     .main-head {
@@ -320,34 +280,31 @@ ul {
     padding-left: 30px;
 }
 .skills .skill {
-    width: 100px;
-    text-align: center;
     border-radius: 10px;
-    border: 1px solid var(--secondary-color) ;
-    box-shadow: 0 25px 50px -12px rgba(3, 9, 33, 0.3);
-
-}
-.skills .skill:hover {
-    /* transform: translateY(-15px); */
-    transition: 0.5s;
-    transform: scale(1.1);
-    box-shadow: 0 25px 50px -12px rgba(3, 9, 33, 1);
+    border: 1px solid var(--main-color) ;
+    box-shadow: 0 25px 70px -12px rgba(3, 9, 33, 0.3);
+    transition: 0.3s;
 }
 .skills img {
-    width: 100px;
-    padding: 15px;
+    width: 40px;
+    margin-top: 15px;
 }
 .skills .skill p {
     font-weight: bold;
     color: var(--secondary-color);
+    
+}
+.skills .skill:hover {
+    animation: bounce 1s infinite;
+    border: 1px solid var(--secondary-color) ;
 }
 /* #----------------------------------- Projects -----------------------------------# */
 .projects {
     background-color: var(--main-color);
-    color: var(--secondary-color);
     padding: 20px 0;
     letter-spacing: 1.1px;
     overflow: hidden;
+    transition: 0.2s;
 }
 .projects .container {
     display: grid;
@@ -360,12 +317,16 @@ ul {
     }
 }
 .projects .project {
-    border: 2px solid #fff;
+    border: 3px solid var(--secondary-color);
+    background-color: #d9e4ec;
     margin-bottom: 10px;
     border-radius: 10px;
     padding: 10px;
     opacity: 0;
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.projects .project:hover {
+    transform: translateY(-10px);   
 }
 .project:nth-child(odd) {
     transform: translateX(-100px);
@@ -377,9 +338,6 @@ ul {
     opacity: 1;
     transform: translateX(0);
 }
-.projects .project:hover {
-    box-shadow: 0 1px 13px 1px #0063f5;
-}
 .projects .project .head {
     border-bottom: 2px solid var(--secondary-color);
     padding: 15px 5px;
@@ -387,19 +345,21 @@ ul {
 .projects .project h2 {
     position: relative;
     padding-left: 20px;
+    color: var(--secondary-color);
+    font-family: "Poppins", serif;
+    font-weight: 800;
 }
 .projects .project h2::before {
     content: "";
     position: absolute;
     left: 0;
-    top: 16px;
+    top: 12px;
     background-color: var(--secondary-color);
     width: 12px;
     height: 12px;
     border-radius: 50%;
 }
 .projects .project h2 + span{
-    color: #fff;
     font-size: 20px;
 }
 .projects .project ul {
@@ -411,8 +371,7 @@ ul {
     padding: 15px 5px;
 }
 .projects .project ul li {
-    padding: 0 3px;
-    border: 1px solid #fff;
+    padding: 0 4px;
     border-radius: 10px;
     background-color: var(--secondary-color);
     color: #fff;
@@ -425,7 +384,6 @@ ul {
     display: flex;
     gap: 15px;
     align-items: center;
-    color: #fff;
 }
 .projects .project .code i {
     font-size: 20px;
@@ -435,13 +393,11 @@ ul {
     display: flex;
     align-items: center;
     gap: 15px;
-    color: #fff;
 }
 .projects .project .preview {
     display: flex;
     align-items: center;
     gap: 15px;
-    color: #fff;
 }
 .projects .project a {
     text-decoration: underline;
@@ -455,20 +411,28 @@ ul {
     overflow: hidden;
 }
 .about p {
-    text-align: center;
-    font-weight: bold;
+    font-weight: 800;
+    font-family: "Poppins", serif;
+    transition: 0.3s;
 }
 .about .box {
     padding: 25px;
+    margin: 0 20px;
     letter-spacing: 1.1px;
     box-shadow: 0 0 25px #000;
     border-radius: 10px;
-    color: #fff;
-    background-color: var(--secondary-color);
+    color: var(--secondary-color);
+    background-color: #d9e4ec;
     transform: translateY(100px);
     opacity: 0;
     overflow: hidden;
-    transition: transform 0.6s ease-out, opacity 0.6s;
+    transition: transform 0.6s ease-out, opacity 0.6s, padding 0.3s;
+}
+.about .box:hover {
+    padding: 35px 25px;
+}
+.about .box:hover p {
+    font-size: 18px;
 }
 .box.active {
     transform: translateY(0);
@@ -484,6 +448,7 @@ ul {
     border-bottom: 3px solid var(--secondary-color);
     color: var(--secondary-color);
     font-size: 30px;
+    letter-spacing: 1px;
 }
 .footer ul {
     color: var(--secondary-color);
@@ -514,6 +479,11 @@ ul {
 .footer .social ul a:hover {
     background-color: #fff;
     box-shadow: 0 2px 10px 5px #0063f5;
+}
+.footer span {
+    color: #324f66;
+    font-family: "Poppins", serif;
+    font-size: 13px;
 }
 /* #----------------------------------- scroll button -----------------------------------# */
 .scroll-btn {
