@@ -120,14 +120,18 @@ ul {
 }
 .body .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    padding: 10px 0 0 0;
 }
-.body img {
+.body .text {
+    text-align: center;
+}
+/* .body img {
     border-radius: 50%;
     width: 350px;
     height: 350px;
     border: 10px solid white;   
-}
+} */
 .body .text h1 {
     font-size: 55px;
     font-weight: 900;
@@ -203,6 +207,8 @@ ul {
 .body ul {
     margin-top: 20px;
     display: flex;
+    align-items: center;
+    justify-content: center;
     column-gap: 30px;
 }   
 .gmail:active {
@@ -222,6 +228,10 @@ ul {
     box-shadow: 0 2px 10px 5px #0063f5;
     padding: 5px 10px;
 }
+.cv {
+    display: flex;
+    justify-content: center;
+}
 @media (max-width: 730px) {
     .nav h2 {
         font-size: 20px;
@@ -239,10 +249,6 @@ ul {
     .body img {
         width: 200px;   
         height: 200px;
-    }
-    .cv {
-        display: flex;
-        justify-content: center;
     }
 }
 /* #----------------------------------- main head  -----------------------------------# */
@@ -264,7 +270,10 @@ ul {
     .main-head {
         display: flex;
         justify-content: center;
-    }
+    }  
+    .body .text h1 {
+        font-size: 50px;
+    }  
 }
 /* #----------------------------------- Skills -----------------------------------# */
 .skills {
@@ -274,7 +283,7 @@ ul {
 }
 .skills .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 13px;
     align-items: center;
     justify-content: center;
@@ -439,7 +448,7 @@ ul {
     padding: 35px 25px;
 }
 .about .box:hover p {
-    font-size: 18px;
+    font-size: 20px;
 }
 .box.active {
     transform: translateY(0);
