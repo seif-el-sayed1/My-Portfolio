@@ -1,5 +1,5 @@
 // Download CV 
-const pdfUrl = "/assets/Seif_ElSayed CV.pdf";
+const pdfUrl = "/assets/Seif_El_Sayed_CV.pdf";
 const cvBtn = document.getElementById("cv-btn");
 cvBtn.addEventListener("click", () => {
     const link = document.createElement("a"); 
